@@ -58,12 +58,12 @@ sed -n "/$(grep '^>' data/scaffold.fasta | sort -k2V -t_ | tail -n 1)/,/^>/p" da
 
 ## Полученные отчёты multiQC
 
-### [Исходные чтения](https://t0pcup.github.io/hse21_hw1/blob/master/multiqc.html)
+### [Исходные чтения](https://github.com/t0pcup/hse21_hw1/blob/master/multiqc.html)
 
 ![analysis_chart](img/fastqc_general_statistics.png)
 ![analysis_graph](img/fastqc_adapter_content_plot.png)
 
-### [Подрезанные чтения](https://t0pcup.github.io/hse21_hw1/blob/master/multiqc_trimmed.html)
+### [Подрезанные чтения](https://github.com/t0pcup/hse21_hw1/blob/master/multiqc_trimmed.html)
 
 ![analysis_trimmed_chart](img/trimmed_fastqc_general_statistics.png)
 ![analysis_trimmed_graph](img/trimmed_fastqc_adapter_content_plot.png)
