@@ -4,7 +4,7 @@
 
 ## Задание №1
 
-Выполненные [комнады](https://github.com/t0pcup/hse21_hw1/master/src/commands.sh):
+Выполненные [комнады](https://github.com/t0pcup/hse21_hw1/blob/master/src/commands.sh):
 
 ```bash
 func() {
