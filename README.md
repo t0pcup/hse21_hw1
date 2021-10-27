@@ -84,9 +84,9 @@ Python output:
 
 ```python
 def info(file):
-  lens = !grep '^>' $file | sed -E 's/^.*len([0-9]+).*$/\1/'
-  contigs = sorted((int(e) for e in lens), reverse = True)
   score = 0
+  segs = !grep '^>' $file | sed -E 's/^.*len([0-9]+).*$/\1/'
+  contigs = sorted((int(e) for e in segs))[::-1]
 
   for e in contigs:
     score += e
@@ -94,16 +94,17 @@ def info(file):
       N50 = e
       break
   
-  print(f"Файл: {file}:")
+  print(f"Информация о файле: {file.split('/')[-1]}:")
   print(f"общее количество контигов = {len(contigs)},")
   print(f"их общая длина = {sum(contigs)},")
   print(f"длина самого длинного контига = {contigs[0]},")
   print(f"N50 = {N50}.\n")
 
+
 def gaps(file):
   num = !grep -Ec 'N+' $file
   total = !grep -Eo 'N+' $file | tr -cd 'N' | wc -c
-  print(f"Файл: {file}:")
+  print(f"Гэпы в файле: {file.split('/')[-1]}:")
   print(f"количество гэпов самого длинного скаффолда = {num[0]},")
   print(f"их общая длина = {total[0]}.\n")
 ```
