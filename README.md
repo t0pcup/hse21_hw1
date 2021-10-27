@@ -80,7 +80,7 @@ Python output:
 
 ![colab_screenshot](img/py_code.png)
 
-Определим функции описывающие файл:
+Определим функции описывающие файл: 
 
 ```python
 def info(file):
